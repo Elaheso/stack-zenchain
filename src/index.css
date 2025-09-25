@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 26% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 23% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 23% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 240 100% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 270 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 16% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 120 100% 50%;
+    --accent-foreground: 220 26% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 16% 15%;
+    --input: 220 16% 15%;
+    --ring: 240 100% 60%;
+
+    /* Gaming-specific colors */
+    --gaming-primary: 240 100% 60%;
+    --gaming-secondary: 270 100% 70%;
+    --gaming-accent: 120 100% 50%;
+    --gaming-warning: 45 100% 60%;
+    --gaming-success: 120 60% 50%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(240 100% 60%), hsl(270 100% 70%));
+    --gradient-secondary: linear-gradient(135deg, hsl(270 30% 20%), hsl(240 30% 25%));
+    --gradient-accent: linear-gradient(135deg, hsl(120 100% 50%), hsl(150 100% 45%));
+    --gradient-card: linear-gradient(135deg, hsl(220 23% 9%), hsl(220 26% 12%));
+    
+    /* Shadows */
+    --shadow-gaming: 0 0 30px hsl(240 100% 60% / 0.3);
+    --shadow-accent: 0 0 20px hsl(120 100% 50% / 0.4);
+    --shadow-card: 0 8px 32px hsl(220 26% 6% / 0.4);
+    
+    /* Animations */
+    --transition-gaming: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 26% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 220 23% 9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 23% 9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 240 100% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 270 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 220 16% 15%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 120 100% 50%;
+    --accent-foreground: 220 26% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 16% 15%;
+    --input: 220 16% 15%;
+    --ring: 240 100% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-secondary);
+    min-height: 100vh;
+  }
+  
+  /* RTL support for Persian */
+  [dir="rtl"] {
+    direction: rtl;
+  }
+  
+  /* Gaming animations */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      box-shadow: 0 0 10px hsl(var(--gaming-primary) / 0.3);
+    }
+    to {
+      box-shadow: 0 0 20px hsl(var(--gaming-primary) / 0.6);
+    }
+  }
+  
+  .animate-pulse-gaming {
+    animation: pulse-gaming 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-gaming {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.05);
+    }
+  }
+}
