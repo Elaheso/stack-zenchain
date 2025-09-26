@@ -60,11 +60,11 @@ const WalletConnection = ({ onWalletConnected, tokenBalance }: WalletConnectionP
       await window.ethereum.request({
         method: 'wallet_addEthereumChain',
         params: [{
-          chainId: '0x7A69', // Zenchain testnet chain ID
+          chainId: '0x20D8', // Zenchain testnet chain ID
           chainName: 'Zenchain Testnet',
           nativeCurrency: {
-            name: 'ZEN',
-            symbol: 'ZEN',
+            name: 'ZTC',
+            symbol: 'ZTC',
             decimals: 18
           },
           rpcUrls: ['https://zenchain-testnet.api.onfinality.io/public'],
