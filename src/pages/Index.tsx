@@ -21,7 +21,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen p-4" dir="rtl">
+    <div className="min-h-screen p-4">
       {/* Header */}
       <header className="text-center py-8">
         <div className="flex items-center justify-center gap-4 mb-4">
@@ -29,11 +29,11 @@ const Index = () => {
             <Gamepad2 className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-gaming-primary via-gaming-secondary to-gaming-accent bg-clip-text text-transparent">
-            گیم‌هاب زن‌چین
+            Zenchain GameHub
           </h1>
         </div>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          پلتفرم بازی بلاک‌چینی با توکن zTTC - سنگ کاغذ قیچی بازی کنید و در شبکه تست زن‌چین شرکت کنید
+          Blockchain gaming platform with zTTC tokens - Play Rock Paper Scissors on Zenchain Testnet
         </p>
       </header>
 
@@ -46,7 +46,7 @@ const Index = () => {
                 <Coins className="w-6 h-6 text-gaming-primary" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">هزینه هر بازی</p>
+                <p className="text-sm text-muted-foreground">Cost per game</p>
                 <p className="text-2xl font-bold text-gaming-primary">1 zTTC</p>
               </div>
             </div>
@@ -58,8 +58,8 @@ const Index = () => {
                 <Gamepad2 className="w-6 h-6 text-gaming-accent" />
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">بازی‌های موجود</p>
-                <p className="text-2xl font-bold text-gaming-accent">سنگ کاغذ قیچی</p>
+                <p className="text-sm text-muted-foreground">Available Games</p>
+                <p className="text-2xl font-bold text-gaming-accent">Rock Paper Scissors</p>
               </div>
             </div>
           </Card>
@@ -70,7 +70,7 @@ const Index = () => {
                 <span className="text-gaming-warning text-lg font-bold">⚡</span>
               </div>
               <div>
-                <p className="text-sm text-muted-foreground">شبکه</p>
+                <p className="text-sm text-muted-foreground">Network</p>
                 <p className="text-2xl font-bold text-gaming-warning">Zenchain</p>
               </div>
             </div>
@@ -87,10 +87,10 @@ const Index = () => {
             
             {/* Network Info */}
             <Card className="p-6 bg-gradient-to-br from-muted/50 to-secondary/50 border-muted/50">
-              <h3 className="text-lg font-semibold mb-4 text-center">اطلاعات شبکه زن‌چین</h3>
+              <h3 className="text-lg font-semibold mb-4 text-center">Zenchain Network Information</h3>
               <div className="space-y-3 text-sm">
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">نام شبکه:</span>
+                  <span className="text-muted-foreground">Network Name:</span>
                   <span>Zenchain Testnet</span>
                 </div>
                 <div className="flex justify-between">
@@ -98,7 +98,7 @@ const Index = () => {
                   <span>31337</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-muted-foreground">ارز اصلی:</span>
+                  <span className="text-muted-foreground">Native Currency:</span>
                   <span>ZEN</span>
                 </div>
                 <div className="flex justify-between">
@@ -123,8 +123,8 @@ const Index = () => {
       {/* Footer */}
       <footer className="text-center py-8 mt-16">
         <p className="text-muted-foreground text-sm">
-          ساخته شده با ❤️ برای شبکه تست زن‌چین | 
-          <a href="https://zenchain.io" target="_blank" rel="noopener noreferrer" className="text-gaming-primary hover:text-gaming-secondary transition-colors mr-2">
+          Built with ❤️ for Zenchain Testnet | 
+          <a href="https://zenchain.io" target="_blank" rel="noopener noreferrer" className="text-gaming-primary hover:text-gaming-secondary transition-colors ml-2">
             zenchain.io
           </a>
         </p>

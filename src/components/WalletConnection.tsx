@@ -17,8 +17,8 @@ const WalletConnection = ({ onWalletConnected, tokenBalance }: WalletConnectionP
   const connectWallet = async () => {
     if (!window.ethereum) {
       toast({
-        title: "خطا",
-        description: "لطفا کیف پول MetaMask را نصب کنید",
+        title: "Error",
+        description: "Please install MetaMask wallet",
         variant: "destructive",
       });
       return;
@@ -36,18 +36,18 @@ const WalletConnection = ({ onWalletConnected, tokenBalance }: WalletConnectionP
       onWalletConnected(address);
       
       toast({
-        title: "اتصال موفق",
-        description: "کیف پول شما با موفقیت متصل شد",
+        title: "Connection Successful",
+        description: "Your wallet has been connected successfully",
       });
       
       // Add Zenchain testnet
       await addZenchainNetwork();
       
     } catch (error) {
-      console.error('خطا در اتصال کیف پول:', error);
+      console.error('Wallet connection error:', error);
       toast({
-        title: "خطا در اتصال",
-        description: "مشکلی در اتصال کیف پول رخ داد",
+        title: "Connection Error",
+        description: "Failed to connect wallet",
         variant: "destructive",
       });
     } finally {
@@ -72,7 +72,7 @@ const WalletConnection = ({ onWalletConnected, tokenBalance }: WalletConnectionP
         }]
       });
     } catch (error) {
-      console.error('خطا در افزودن شبکه:', error);
+      console.error('Network addition error:', error);
     }
   };
 
@@ -80,8 +80,8 @@ const WalletConnection = ({ onWalletConnected, tokenBalance }: WalletConnectionP
     setIsConnected(false);
     setWalletAddress('');
     toast({
-      title: "قطع اتصال",
-      description: "کیف پول شما قطع شد",
+      title: "Disconnected",
+      description: "Your wallet has been disconnected",
     });
   };
 
@@ -90,7 +90,7 @@ const WalletConnection = ({ onWalletConnected, tokenBalance }: WalletConnectionP
   };
 
   return (
-    <div className="w-full max-w-md mx-auto" dir="rtl">
+    <div className="w-full max-w-md mx-auto">
       <Card className="p-6 bg-gradient-to-br from-card via-card to-muted border-gaming-primary/20 shadow-card">
         <div className="text-center space-y-4">
           <div className="mx-auto w-16 h-16 bg-gradient-to-r from-gaming-primary to-gaming-secondary rounded-full flex items-center justify-center animate-glow">
@@ -98,13 +98,13 @@ const WalletConnection = ({ onWalletConnected, tokenBalance }: WalletConnectionP
           </div>
           
           <h2 className="text-2xl font-bold bg-gradient-to-r from-gaming-primary to-gaming-secondary bg-clip-text text-transparent">
-            کیف پول
+            Wallet
           </h2>
           
           {!isConnected ? (
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                برای شروع بازی کیف پول خود را متصل کنید
+                Connect your wallet to start playing
               </p>
               <Button
                 variant="wallet"
@@ -113,19 +113,19 @@ const WalletConnection = ({ onWalletConnected, tokenBalance }: WalletConnectionP
                 disabled={isLoading}
                 className="w-full"
               >
-                <Wallet className="ml-2 h-5 w-5" />
-                {isLoading ? 'در حال اتصال...' : 'اتصال کیف پول'}
+                <Wallet className="mr-2 h-5 w-5" />
+                {isLoading ? 'Connecting...' : 'Connect Wallet'}
               </Button>
             </div>
           ) : (
             <div className="space-y-4">
               <div className="p-4 bg-muted rounded-lg">
-                <p className="text-sm text-muted-foreground mb-1">آدرس کیف پول:</p>
+                <p className="text-sm text-muted-foreground mb-1">Wallet Address:</p>
                 <p className="font-mono text-sm">{formatAddress(walletAddress)}</p>
               </div>
               
               <div className="p-4 bg-gradient-to-r from-gaming-accent/10 to-gaming-success/10 rounded-lg border border-gaming-accent/30">
-                <p className="text-sm text-muted-foreground mb-1">موجودی zTTC:</p>
+                <p className="text-sm text-muted-foreground mb-1">zTTC Balance:</p>
                 <p className="text-2xl font-bold text-gaming-accent">{tokenBalance.toFixed(2)}</p>
               </div>
               
@@ -136,7 +136,7 @@ const WalletConnection = ({ onWalletConnected, tokenBalance }: WalletConnectionP
                   onClick={disconnectWallet}
                   className="flex-1"
                 >
-                  قطع اتصال
+                  Disconnect
                 </Button>
                 <Button
                   variant="outline"

@@ -8,51 +8,51 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 220 26% 6%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
 
-    --card: 220 23% 9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 220 23% 9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 240 100% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 120 100% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 270 30% 20%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 120 20% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 220 16% 15%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 120 100% 50%;
-    --accent-foreground: 220 26% 6%;
+    --accent: 120 80% 50%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 220 16% 15%;
-    --input: 220 16% 15%;
-    --ring: 240 100% 60%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 120 100% 40%;
 
-    /* Gaming-specific colors */
-    --gaming-primary: 240 100% 60%;
-    --gaming-secondary: 270 100% 70%;
-    --gaming-accent: 120 100% 50%;
+    /* Gaming-specific colors - Green & Black theme */
+    --gaming-primary: 120 100% 40%;
+    --gaming-secondary: 120 80% 25%;
+    --gaming-accent: 120 80% 50%;
     --gaming-warning: 45 100% 60%;
     --gaming-success: 120 60% 50%;
     
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(240 100% 60%), hsl(270 100% 70%));
-    --gradient-secondary: linear-gradient(135deg, hsl(270 30% 20%), hsl(240 30% 25%));
-    --gradient-accent: linear-gradient(135deg, hsl(120 100% 50%), hsl(150 100% 45%));
-    --gradient-card: linear-gradient(135deg, hsl(220 23% 9%), hsl(220 26% 12%));
+    /* Gradients - Green & Black theme */
+    --gradient-primary: linear-gradient(135deg, hsl(120 100% 40%), hsl(120 80% 50%));
+    --gradient-secondary: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 12%));
+    --gradient-accent: linear-gradient(135deg, hsl(120 80% 50%), hsl(120 100% 45%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 8%), hsl(0 0% 10%));
     
-    /* Shadows */
-    --shadow-gaming: 0 0 30px hsl(240 100% 60% / 0.3);
-    --shadow-accent: 0 0 20px hsl(120 100% 50% / 0.4);
-    --shadow-card: 0 8px 32px hsl(220 26% 6% / 0.4);
+    /* Shadows - Green & Black theme */
+    --shadow-gaming: 0 0 30px hsl(120 100% 40% / 0.3);
+    --shadow-accent: 0 0 20px hsl(120 80% 50% / 0.4);
+    --shadow-card: 0 8px 32px hsl(0 0% 5% / 0.4);
     
     /* Animations */
     --transition-gaming: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -77,33 +77,33 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 220 26% 6%;
-    --foreground: 210 40% 98%;
+    --background: 0 0% 5%;
+    --foreground: 0 0% 95%;
 
-    --card: 220 23% 9%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 220 23% 9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 240 100% 60%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 120 100% 40%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 270 30% 20%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 120 20% 15%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 220 16% 15%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 120 100% 50%;
-    --accent-foreground: 220 26% 6%;
+    --accent: 120 80% 50%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 95%;
 
-    --border: 220 16% 15%;
-    --input: 220 16% 15%;
-    --ring: 240 100% 60%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 120 100% 40%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -126,9 +126,9 @@ All colors MUST be HSL.
     min-height: 100vh;
   }
   
-  /* RTL support for Persian */
-  [dir="rtl"] {
-    direction: rtl;
+  /* LTR support for English */
+  body {
+    direction: ltr;
   }
   
   /* Gaming animations */
